@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+z-index:1000;
+}
+
+nav h2{
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+padding-top:100px;
+text-align:center;
+padding-bottom:60px;
+}
+
+.hero img{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid #38bdf8;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:0.8;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 8%;
+}
+
+.section-title{
+font-size:26px;
+margin-bottom:25px;
+color:#38bdf8;
+}
+
+/* ABOUT */
+
+.about p{
+max-width:700px;
+}
+
+/* SKILLS */
+
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+background:#1e293b;
+padding:10px 15px;
+border-radius:6px;
+font-size:14px;
+}
+
+/* EXPERIENCE */
+
+.experience-item{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+}
+
+.project a{
+color:#38bdf8;
+text-decoration:none;
+font-size:14px;
+}
+
+/* CONTACT */
+
+.contact form{
+display:flex;
+flex-direction:column;
+max-width:400px;
+gap:10px;
+}
+
+input, textarea{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px;
+background:#38bdf8;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0ea5e9;
+}
+
+/* CPA BOX */
+
+.cpa-box{
+margin-top:20px;
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+}
+
+.cpa-btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#22c55e;
+color:white;
+border-radius:5px;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+font-size:14px;
+opacity:0.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+section{
+padding:50px 6%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<h2>MyPortfolio</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+<img src="profile.jpg" alt="Profile Photo Placeholder">
+<h1>Your Name</h1>
+<p>Web Developer | Digital Creator | CPA Marketer</p>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+<h2 class="section-title">About Me</h2>
+<p>
+Hello! I'm a passionate digital creator and developer who enjoys building modern web applications, automation tools, and online earning systems.  
+I specialize in creating responsive websites, AI tools, and CPA marketing platforms that help generate online income and provide value to users worldwide.
+</p>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-list">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Responsive Web Design</div>
+<div class="skill">AI Tools</div>
+<div class="skill">Landing Page Design</div>
+<div class="skill">CPA Marketing</div>
+<div class="skill">UI/UX Design</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+<h2 class="section-title">Experience</h2>
+
+<div class="experience-item">
+<h3>Web Developer</h3>
+<p>Built modern and responsive websites, landing pages, and automation tools for digital marketing projects.</p>
+</div>
+
+<div class="experience-item">
+<h3>AI Tools Content Creator</h3>
+<p>Created tutorials, scripts, and video content explaining powerful AI tools and online earning methods.</p>
+</div>
+
+<div class="experience-item">
+<h3>CPA Marketing Specialist</h3>
+<p>Promoted global CPA offers through optimized landing pages and traffic strategies.</p>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Gaming Rewards Landing Page</h3>
+<p>A responsive landing page for gamers where users can access rewards and complete offers.</p>
+<a href="#">View Project</a>
+</div>
+
+<div class="project">
+<h3>AI Avatar Generator</h3>
+<p>A web app that generates AI avatars for influencers and creators.</p>
+<a href="#">View Project</a>
+</div>
+
+<div class="project">
+<h3>Video to Text AI Tool</h3>
+<p>An application that converts video content into accurate text transcripts.</p>
+<a href="#">View Project</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="4" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="cpa-box">
+
+<h3>🔥 Exclusive Rewards</h3>
+<p>
+Complete a simple offer to unlock exclusive tools and rewards.
+</p>
+
+<a class="cpa-btn" href="YOUR_CPAGRIP_LINK_HERE" target="_blank">
+Unlock Now
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Your Name | Portfolio Website
+
+</footer>
+
+</body>
+  </html>
