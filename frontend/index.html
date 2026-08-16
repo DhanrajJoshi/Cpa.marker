@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text-to-Image Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Text → Image</h1>
+      <p class="subtitle">Lightweight open-source text-to-image generator (backend proxies API keys)</p>
+    </header>
+
+    <main>
+      <section class="controls card">
+        <label for="prompt">Prompt</label>
+        <textarea id="prompt" placeholder="Type a creative prompt..."></textarea>
+
+        <div class="row">
+          <label for="size">Aspect / Size</label>
+          <select id="size">
+            <option value="256x256">1:1 — 256×256</option>
+            <option value="512x512" selected>1:1 — 512×512</option>
+            <option value="640x480">4:3 — 640×480</option>
+            <option value="1024x512">2:1 — 1024×512</option>
+          </select>
+
+          <label for="quality">Quality / Model</label>
+          <select id="quality">
+            <option value="standard" selected>Standard</option>
+            <option value="high">High (more time)</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="generate">Generate Image</button>
+          <div id="loader" class="loader hidden" aria-hidden="true"></div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+      </section>
+
+      <section class="preview card">
+        <h2>Preview</h2>
+        <div id="previewArea" class="preview-area">
+          <img id="previewImage" src="" alt="Generated preview" class="hidden" />
+          <div id="previewPlaceholder" class="placeholder">No image yet — generate one!</div>
+        </div>
+        <div class="preview-actions">
+          <a id="downloadBtn" class="btn hidden" download>Download</a>
+          <button id="copyUrl" class="btn small hidden">Copy URL</button>
+        </div>
+      </section>
+
+      <section class="gallery card">
+        <h2>History / Gallery</h2>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Keep your API key private. Backend must not be exposed to public browsers with keys.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
