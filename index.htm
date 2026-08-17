@@ -1,364 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dhanraj Joshi — Web Developer & CPA Marketer</title>
+  <meta name="description" content="Portfolio of Dhanraj Joshi — web developer, AI tools creator and CPA marketing specialist. Responsive sites, landing pages and automation." />
 
-<style>
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Dhanraj Joshi — Web Developer & CPA Marketer" />
+  <meta property="og:description" content="Portfolio — responsive websites, AI tools, CPA marketing & landing pages." />
+  <meta property="og:type" content="website" />
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 
-body{
-background:#0f172a;
-color:white;
-line-height:1.6;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#020617;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-z-index:1000;
-}
-
-nav h2{
-color:#38bdf8;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-size:14px;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-padding-top:100px;
-text-align:center;
-padding-bottom:60px;
-}
-
-.hero img{
-width:140px;
-height:140px;
-border-radius:50%;
-border:4px solid #38bdf8;
-object-fit:cover;
-margin-bottom:15px;
-}
-
-.hero h1{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.hero p{
-opacity:0.8;
-}
-
-/* SECTIONS */
-
-section{
-padding:60px 8%;
-}
-
-.section-title{
-font-size:26px;
-margin-bottom:25px;
-color:#38bdf8;
-}
-
-/* ABOUT */
-
-.about p{
-max-width:700px;
-}
-
-/* SKILLS */
-
-.skills-list{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.skill{
-background:#1e293b;
-padding:10px 15px;
-border-radius:6px;
-font-size:14px;
-}
-
-/* EXPERIENCE */
-
-.experience-item{
-background:#1e293b;
-padding:20px;
-border-radius:8px;
-margin-bottom:15px;
-}
-
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.project{
-background:#1e293b;
-padding:20px;
-border-radius:8px;
-}
-
-.project a{
-color:#38bdf8;
-text-decoration:none;
-font-size:14px;
-}
-
-/* CONTACT */
-
-.contact form{
-display:flex;
-flex-direction:column;
-max-width:400px;
-gap:10px;
-}
-
-input, textarea{
-padding:10px;
-border:none;
-border-radius:5px;
-}
-
-button{
-padding:10px;
-background:#38bdf8;
-border:none;
-border-radius:5px;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#0ea5e9;
-}
-
-/* CPA BOX */
-
-.cpa-box{
-margin-top:20px;
-background:#1e293b;
-padding:20px;
-border-radius:8px;
-}
-
-.cpa-btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:#22c55e;
-color:white;
-border-radius:5px;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-font-size:14px;
-opacity:0.7;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-nav ul{
-display:none;
-}
-
-.hero h1{
-font-size:24px;
-}
-
-section{
-padding:50px 6%;
-}
-
-}
-
-</style>
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dhanraj Joshi",
+    "jobTitle": "Web Developer",
+    "url": "https://github.com/DhanrajJoshi/Cpa.marker",
+    "sameAs": [
+      "https://github.com/DhanrajJoshi"
+    ]
+  }
+  </script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Dhanraj Joshi</h1>
 
-<!-- NAVBAR -->
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-<nav>
-<h2>MyPortfolio</h2>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+      <nav id="main-nav" class="nav" role="navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- HERO -->
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <picture>
+          <source srcset="profile.webp" type="image/webp">
+          <img src="profile.jpg" alt="Portrait of Dhanraj Joshi" class="profile-photo" width="140" height="140" loading="lazy">
+        </picture>
+        <h2 id="hero-title">Dhanraj Joshi</h2>
+        <p class="subtitle">Web Developer • AI Tools • CPA Marketer</p>
+      </div>
+    </section>
 
-<div class="hero">
-<img src="profile.jpg" alt="Profile Photo Placeholder">
-<h1>Your Name</h1>
-<p>Web Developer | Digital Creator | CPA Marketer</p>
-</div>
+    <section id="about" class="about container" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>I'm a digital creator and developer specializing in responsive web apps, automation tools and CPA marketing platforms that generate online income and deliver value to users worldwide.</p>
+    </section>
 
-<!-- ABOUT -->
+    <section id="skills" class="container" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="skills-list" aria-label="Skills list">
+        <li class="skill">HTML</li>
+        <li class="skill">CSS</li>
+        <li class="skill">JavaScript</li>
+        <li class="skill">Responsive Design</li>
+        <li class="skill">AI Tools</li>
+        <li class="skill">Landing Pages</li>
+        <li class="skill">CPA Marketing</li>
+      </ul>
+    </section>
 
-<section id="about" class="about">
-<h2 class="section-title">About Me</h2>
-<p>
-Hello! I'm a passionate digital creator and developer who enjoys building modern web applications, automation tools, and online earning systems.  
-I specialize in creating responsive websites, AI tools, and CPA marketing platforms that help generate online income and provide value to users worldwide.
-</p>
-</section>
+    <section id="experience" class="container" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <article class="experience-item">
+        <h3>Web Developer</h3>
+        <p>Built modern and responsive websites and automation tools for digital projects.</p>
+      </article>
+      <article class="experience-item">
+        <h3>AI Tools Content Creator</h3>
+        <p>Created tutorials, scripts and video content about AI tools and online earning methods.</p>
+      </article>
+      <article class="experience-item">
+        <h3>CPA Marketing Specialist</h3>
+        <p>Promoted CPA offers with optimized landing pages and traffic strategies.</p>
+      </article>
+    </section>
 
-<!-- SKILLS -->
+    <section id="projects" class="container" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>Gaming Rewards Landing Page</h3>
+          <p>Responsive landing page for gamers to access rewards and complete offers.</p>
+          <a href="#" class="project-link" rel="noopener noreferrer">View Project</a>
+        </article>
+        <article class="project">
+          <h3>AI Avatar Generator</h3>
+          <p>Web app that generates AI avatars for influencers and creators.</p>
+          <a href="#" class="project-link" rel="noopener noreferrer">View Project</a>
+        </article>
+        <article class="project">
+          <h3>Video to Text AI Tool</h3>
+          <p>Application that converts video content into accurate text transcripts.</p>
+          <a href="#" class="project-link" rel="noopener noreferrer">View Project</a>
+        </article>
+      </div>
+    </section>
 
-<section id="skills">
-<h2 class="section-title">Skills</h2>
+    <section id="contact" class="container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <form action="#" method="post" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
 
-<div class="skills-list">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
 
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Responsive Web Design</div>
-<div class="skill">AI Tools</div>
-<div class="skill">Landing Page Design</div>
-<div class="skill">CPA Marketing</div>
-<div class="skill">UI/UX Design</div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
 
-</div>
-</section>
+        <!-- simple honeypot -->
+        <label class="hidden" for="hp">Leave this field empty</label>
+        <input id="hp" name="hp" type="text" class="hidden" tabindex="-1" autocomplete="off"/>
 
-<!-- EXPERIENCE -->
+        <button type="submit">Send Message</button>
+      </form>
 
-<section id="experience">
-<h2 class="section-title">Experience</h2>
+      <aside class="cpa-box" aria-labelledby="cpa-title">
+        <h3 id="cpa-title">🔥 Exclusive Rewards</h3>
+        <p>Complete a simple offer to unlock exclusive tools and rewards.</p>
+        <a class="cpa-btn" href="YOUR_CPAGRIP_LINK_HERE" target="_blank" rel="noopener noreferrer">Unlock Now</a>
+      </aside>
+    </section>
+  </main>
 
-<div class="experience-item">
-<h3>Web Developer</h3>
-<p>Built modern and responsive websites, landing pages, and automation tools for digital marketing projects.</p>
-</div>
-
-<div class="experience-item">
-<h3>AI Tools Content Creator</h3>
-<p>Created tutorials, scripts, and video content explaining powerful AI tools and online earning methods.</p>
-</div>
-
-<div class="experience-item">
-<h3>CPA Marketing Specialist</h3>
-<p>Promoted global CPA offers through optimized landing pages and traffic strategies.</p>
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-<h2 class="section-title">Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>Gaming Rewards Landing Page</h3>
-<p>A responsive landing page for gamers where users can access rewards and complete offers.</p>
-<a href="#">View Project</a>
-</div>
-
-<div class="project">
-<h3>AI Avatar Generator</h3>
-<p>A web app that generates AI avatars for influencers and creators.</p>
-<a href="#">View Project</a>
-</div>
-
-<div class="project">
-<h3>Video to Text AI Tool</h3>
-<p>An application that converts video content into accurate text transcripts.</p>
-<a href="#">View Project</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="4" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-<div class="cpa-box">
-
-<h3>🔥 Exclusive Rewards</h3>
-<p>
-Complete a simple offer to unlock exclusive tools and rewards.
-</p>
-
-<a class="cpa-btn" href="YOUR_CPAGRIP_LINK_HERE" target="_blank">
-Unlock Now
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Your Name | Portfolio Website
-
-</footer>
-
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Dhanraj Joshi</p>
+    </div>
+  </footer>
 </body>
-  </html>
+</html>
