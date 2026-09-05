@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#3498db" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Dhanraj" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  
   <title>Dhanraj Joshi — Web Developer & CPA Marketer</title>
   <meta name="description" content="Portfolio of Dhanraj Joshi — web developer, AI tools creator and CPA marketing specialist. Responsive sites, landing pages and automation." />
 
@@ -10,10 +16,14 @@
   <meta property="og:title" content="Dhanraj Joshi — Web Developer & CPA Marketer" />
   <meta property="og:description" content="Portfolio — responsive websites, AI tools, CPA marketing & landing pages." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="/profile.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="mobile-styles.css" />
+  <script defer src="app.js"></script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -49,6 +59,8 @@
       </nav>
     </div>
   </header>
+
+  <button id="install-app-btn" style="display: none;">📱 Install App</button>
 
   <main>
     <section class="hero" id="home" aria-labelledby="hero-title">
