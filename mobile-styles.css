@@ -1,0 +1,204 @@
+/* Mobile App Enhancements */
+
+:root {
+  --safe-area-inset-left: env(safe-area-inset-left);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+/* Handle notch and safe areas */
+html, body {
+  padding-top: var(--safe-area-inset-top);
+  padding-left: var(--safe-area-inset-left);
+  padding-right: var(--safe-area-inset-right);
+}
+
+.site-footer {
+  padding-bottom: max(1rem, var(--safe-area-inset-bottom));
+}
+
+/* Prevent zoom on input focus */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Touch-friendly buttons */
+button, a.cpa-btn, a.project-link {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 20px;
+  touch-action: manipulation;
+}
+
+/* Improved touch targets */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fullscreen for standalone apps */
+@supports (display: fullscreen) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Mobile viewport optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Installation prompt button */
+  #install-app-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    animation: slideUp 0.3s ease-out;
+    display: none;
+  }
+
+  #install-app-btn:active {
+    transform: scale(0.95);
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Mobile navigation */
+  .nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    max-height: 400px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    padding: 15px 20px;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* Disable horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Container padding for notch devices */
+  .container {
+    padding-left: max(1rem, var(--safe-area-inset-left));
+    padding-right: max(1rem, var(--safe-area-inset-right));
+  }
+
+  /* Improved form for mobile */
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  /* Landscape mode adjustments */
+  @media (orientation: landscape) {
+    .hero {
+      min-height: 50vh;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 998;
+    }
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .nav {
+    background-color: #222;
+  }
+
+  input, textarea {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+  }
+
+  button {
+    background-color: #2c3e50;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for high-DPI */
+}
