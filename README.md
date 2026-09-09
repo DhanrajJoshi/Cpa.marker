@@ -1,50 +1,32 @@
-# Text-to-Image Generator (Open-source)
+# Text to Image — Android App
 
-Lightweight Text→Image web app with a FastAPI backend that proxies image generation requests to an external image-generation provider (example: OpenAI Images). Designed so API keys stay on the server (never in browser).
+Modern Android application rewritten from Dhanraj Joshi's Text-to-Image & CPA Marker web app using Kotlin and Jetpack Compose.
 
-Features
-- Prompt input
-- Generate button with loading state
-- Preview and download
-- Gallery/history of generated images
-- Aspect ratio / size and simple quality selection
-- Backend reads API key from `.env` (do NOT commit `.env`)
+## Features
 
-Project structure
-- frontend/ — static HTML/CSS/JS (index.html, style.css, app.js)
-- backend/ — FastAPI app (main.py), requirements, .env.example
-- generated/ — where generated images are stored (ignored by default)
-- README.md, LICENSE, .gitignore
+- **AI Text → Image Generator**:
+  - Creative prompt input with prompt inspiration chips
+  - Aspect ratio & dimension controls (1:1 256×256, 1:1 512×512, 4:3 640×480, 2:1 1024×512)
+  - Quality and model enhancement options (Standard, High)
+  - Real-time generative preview with image zoom/scaling
+  - Actions: Copy URL, share artwork, download/recreate
+- **History & Gallery**:
+  - Local persistence of all generated artworks
+  - Detailed modal view with metadata (timestamp, resolution, prompt, filename)
+  - Quick action to reuse previous prompts in the generator
+- **Portfolio & Projects Showcase**:
+  - Dhanraj Joshi's profile, bio, and technical skills overview
+  - Experience timeline in web development, AI tooling, and CPA marketing
+  - Featured projects with quick-launch prompts into the AI generator
+- **Exclusive Rewards & Contact**:
+  - CPA offer unlocks and reward codes
+  - Contact form with input validation and local offline message queueing
 
-Quickstart (local)
-1. Clone the repo.
-2. Create a virtualenv and install backend deps:
-   python -m venv .venv
-   source .venv/bin/activate
-   pip install -r backend/requirements.txt
+## Architecture & Tech Stack
 
-3. Copy and edit backend/.env:
-   cp backend/.env.example backend/.env
-   # put your provider API key in backend/.env (OPENAI_API_KEY=...)
-
-4. Run the backend:
-   uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
-
-5. Open in browser:
-   http://localhost:8000/frontend/index.html
-
-Notes on providers & API keys
-- The included backend uses an example OpenAI Images endpoint:
-  POST to OPENAI_API_URL with JSON {"prompt": "...", "size":"512x512"}
-  Many providers return base64 in data[0].b64_json or a public URL. Adjust backend as required for your provider.
-- Keep your API key private: put it in backend/.env (which is in .gitignore).
-- If you want to use another provider (Stability AI / Replicate / etc.), update backend/main.py request/response handling accordingly.
-
-Security & production
-- In production, do not allow frontend to talk directly to the external provider.
-- Lock CORS origins to your frontend domain.
-- Add rate-limiting and authentication to avoid misuse/charges.
-- Consider storing images in cloud storage (S3) instead of server disk for scale.
-
-License
-This project is MIT-licensed — see LICENSE.
+- **UI**: 100% Jetpack Compose with Material Design 3 (M3)
+- **Language**: Kotlin 2.2 with Coroutines & StateFlow
+- **Image Loading**: Coil 2.7 with crossfade and async states
+- **Networking**: OkHttp 4.12
+- **Persistence**: SharedPreferences / JSON offline storage
+- **Toolchain**: AGP 9.1, Gradle 9.3.1, Android SDK 36 (Java 21)

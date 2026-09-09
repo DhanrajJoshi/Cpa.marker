@@ -1,0 +1,8 @@
+{
+  "name": "Text to Image",
+  "description": "AI Text to Image generator, creative studio, and portfolio showcase",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

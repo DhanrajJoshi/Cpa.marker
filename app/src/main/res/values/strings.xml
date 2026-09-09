@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Text to Image</string>
+    <string name="nav_generator">Generator</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_portfolio">Portfolio</string>
+    <string name="nav_rewards">Rewards</string>
+    <string name="nav_contact">Contact</string>
+</resources>

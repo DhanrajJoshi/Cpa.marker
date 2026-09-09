@@ -1,20 +1,18 @@
-# Python
-__pycache__/
-*.py[cod]
-*.env
-backend/.env
-
-# Node / frontend
-node_modules/
-
-# Generated images (do not commit by default)
-generated/
-generated/**
-
-# Editor
-.vscode/
-.idea/
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
 .DS_Store
-
-# Logs
-*.log
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+.env
+*.hprof
